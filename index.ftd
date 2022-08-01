@@ -1,1 +1,44 @@
--- ds.page: hello
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fpm
+
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+-- ftd.column:
+width: fill
+padding-horizontal: 50
+padding-horizontal if $is-mobile: 20
+background-color: $fpm.color.main.background.base
+height: fill
+
+
+-- pd.package: Nunito - fpm font
+name: aditirai290698.github.io/nunito
+
+This component consist of Inter font with all it's styles from Thin-100 to Black-900.
+
+
+-- pd.component: Nunito - fpm font
+name: https://github.com/aditirai290698/nunito
+
+This component consist of Inter font with all it's styles from Thin-100 to Black-900.
+
+
+
+-- pd.hidden-code: How to use
+
+include aditirai290698.github.io/nunito package into FPM.ftd file
+
+\-- fpm.dependency: aditirai290698.github.io/nunito
+
+\-- fpm.auto-import: aditirai290698.github.io/nunito as nunito
+
+Inside your .ftd file to change for any specific token use:
+
+\-- fpm.type.headline-small.font: $nunito.fonts.Inter
+
+\-- ftd.text:
+role: $fpm.type.headline-small
